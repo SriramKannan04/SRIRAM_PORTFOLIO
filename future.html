@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Future prediction</title>
+    <link rel="icon" href="future.png">
+    <style>
+        body
+        {
+            background-image: url(purple\ bg.jpg);
+            height: 90vh;
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+</head>
+<div>
+    <link href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap" rel="stylesheet">
+    <center><h1 style="font-family: 'Black Ops One', cursive; color: goldenrod; font-size: 50px;">FUTURE PREDICTION</h1></center>
+
+    <link href="https://fonts.googleapis.com/css2?family=Kaushan+Script&display=swap" rel="stylesheet">
+    <center><p style="font-family: 'Kaushan Script', cursive; color: hotpink; font-size: 30px;" >Here you can check your growth</p></center>
+</div>
+<body style="font-size: 25px; color: aquamarine; font-family: 'Aladin', cursive;">
+<link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Rye&display=swap" rel="stylesheet">
+    <form action="future.html" method="post">
+        <label>Enter your name:-</label>
+        <span style="padding-left: 10px;"></span>
+        <input type="text" id="name">
+        
+        <br><br>
+        
+        <label>Enter the year:-</label>
+        <span style="padding-left: 30px;"></span>
+        <input type="text" id="year">
+        <input type="checkbox" onclick="prediction()">
+        <br><br>
+        <u style="font-family: 'Times New Roman', Times, serif; color: beige; padding-left: 10%;">Your result</u>
+        <br><br>
+        <label>Growth Prediction:-</label>
+        <span style="padding-left: 10px;"></span>
+        <span id="future" style="padding-left: 10px; color: greenyellow; font-family: 'Rye', cursive;;" ></span>
+        <br><br><br><br>
+        <script>
+            function prediction() 
+            {
+                var a = document.getElementById("name").value;
+                var b = Math.random(b)*100;
+                var c = Math.floor(b);
+                var d = document.getElementById("year").value;
+                document.getElementById("future").innerHTML = " hi..! " +a+ " Your growth percentage will be  " +c+ "% in  " +d;
+            }
+        </script>        
+    </form>
+    <br>
+    <br>
+</body>
+</html>

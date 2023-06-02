@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="icon" href="length.png">
+    <title>ENERGY CONVERTER</title>
+    <link rel="stylesheet" href="converter.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Tapestry&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Aladin&display=swap" rel="stylesheet">
+</head>
+<body>
+    <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&display=swap" rel="stylesheet">
+    <center><h1>ENERGY CONVERTER</h1></center>
+    <center class="content">enter values to convert from <span style="padding-left: 15px;"></span> <em><strong style="color: darkorange;">joule</strong></em> <span style="padding-left: 15px;"></span> to <span style="padding-left: 15px;"></span> <em><strong style="color: darkorange;">kilojoule</strong></em> </center>
+        <br><br><br>
+    <p>Enter value for joule :-</p>
+    <input type="text" id="joule" style="background-color: rgb(85, 85, 148);">
+        <br><br>
+    <button onclick="energy()">CONVERT</button>
+        <br><br>
+    <p>Values in kilojoule :-</p>
+    <input type="number" id="kilojoule" readonly style="background-color: rgb(85, 85, 148);">
+        
+    <script>
+        function energy() 
+        {
+            var a = document.getElementById("joule").value;
+            var b = a*1000;
+            var c = b;
+            document.getElementById("kilojoule").value = c;
+        }
+    </script>
+</body>
+</html>

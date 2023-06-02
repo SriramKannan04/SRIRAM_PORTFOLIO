@@ -1,0 +1,35 @@
+div
+{
+    background-color: black;
+    
+}
+
+body
+{
+    background: linear-gradient(90deg,#00008b,#4b0082);    
+    color: white;
+}
+.shopName
+{
+    font-family: 'Fugaz One', cursive;
+    font-size: 30px;
+    color: #ffa500;
+}
+.space
+{
+    padding-left: 950px;
+}
+.gap
+{
+    padding-left: 50px;
+}
+.imgSize
+{
+    width: 300px;
+    height: 300px;
+}
+.imgSize:hover
+{
+    width: 350px;
+    height: 350px;
+}

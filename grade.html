@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>GRADE CALCULATOR</title>
+    <link rel="icon" href="grade.png">
+    <style>
+        body
+        {
+            background-image: url(grade\ wallpaper.jpg);
+            height: 120vh;
+            background-position: center;
+            background-size: cover;
+        }
+
+        h1
+        {
+            color: hotpink;
+        }
+
+        table
+        {
+            color: aqua;
+            font-size: 20px;
+            padding-left: 200px;
+        }
+        button
+        {
+            border-radius: 100px;
+            color:navajowhite;
+            background-color: black;
+        }
+        button:hover
+        {
+            background-color: gold;
+            color: red;
+        }
+        input
+        {
+           background-color: black;
+           border-radius: 10px;
+           color: lawngreen;
+        }
+    </style>
+</head>
+<body>
+    <br><br><br><br><br>
+    <center><H1>GRADE CALCULATOR</H1></center>
+    <br><br>
+    <table cellspacing="10">
+        <tr>
+            <td>
+                <p>Enter your Chemistry mark :- <span style="padding-left: 10px;"></span> <input type="number" id="che" class="chem"></p>
+                <span style="padding-left: 100px;"></span>
+                
+                <button onclick="chemistry()">GRADE CALCULATOR</button>
+                
+                <p>Your Grade in Chemistry :- <span style="padding-left: 30px;"></span> <input type="text" id="cheg" readonly placeholder="grade in Chemistry"> <span style="padding-left: 120px;"></span> </p>
+            </td>
+
+            <td>
+                <p>Enter your Physics mark :- <span style="padding-left: 40px;"></span> <input type="number" id="phy" class="phys"></p>
+                <span style="padding-left: 100px;"></span>
+                
+                <button onclick="physics()">GRADE CALCULATOR</button>
+                
+                <p>Your Grade in Physics :- <span style="padding-left: 60px;"></span> <input type="text" id="phyg" readonly placeholder="grade in physics"> <span style="padding-left: 120px;"></span> </p>
+            </td>
+        </tr>
+    </table>
+
+    <table cellspacing="10">
+        <tr>
+            <td>
+                <p>Enter your Maths mark :- <span style="padding-left: 45px;"></span> <input type="number" id="math" class="mat"></p>
+                <span style="padding-left: 100px;"></span>
+                
+                <button onclick="maths()">GRADE CALCULATOR</button>
+                
+                <p>Your Grade in Maths :- <span style="padding-left: 65px;"></span> <input type="text" id="mathg" readonly placeholder="grade in Maths"> <span style="padding-left: 120px;"></span> </p>
+            </td>
+    
+            <td>
+                <p>Enter your Computer mark :- <span style="padding-left: 25px;"></span> <input type="number" id="comp" class="com"></p>
+                <span style="padding-left: 100px;"></span>
+                
+                <button onclick="computer()">GRADE CALCULATOR</button>
+                
+                <p>Your Grade in Computer :- <span style="padding-left: 45px;"></span> <input type="text" id="compg" readonly placeholder="grade in Computer"> <span style="padding-left: 120px;"></span> </p>
+            </td>
+        </tr>
+    </table>
+
+    <table>
+        <tr>
+            <td>
+                <p>Enter your English mark :- <span style="padding-left: 42px;"></span> <input type="number" id="eng" class="engg"></p>
+                <span style="padding-left: 100px;"></span>
+
+                <button onclick="english()">GRADE CALCULATOR</button>
+
+                <p>Your Grade in English :- <span style="padding-left: 60px;"></span> <input type="text" id="engg" readonly placeholder="grade in English"> <span style="padding-left: 120px;"></span> </p>
+            </td>
+
+            <td>
+                <p>
+                    <span style="padding-left: 75px;"></span> Total marks:- <span style="padding-left: 90px;"></span> CGPA:- 
+                </p>
+                <p> 
+                    <span style="padding-left: 75px;"></span> 
+                    <input type="text" placeholder="total marks obtained..." class="totalmarks"> 
+                    <input type="checkbox" onclick="total()"> 
+                    <input type="text" placeholder="CGPA" class="cgpa">
+                </p>
+            </td>
+        </tr>
+    </table>
+
+    <script>
+        function chemistry()
+        {
+            var a = document.getElementById("che").value;
+            if (a>100) 
+            {
+                document.getElementById("cheg").value = "invalid data";
+                alert(" invalid");  
+            }
+            else if (a>90) 
+            {
+                document.getElementById("cheg").value = " A grade ";
+                alert(" congratulations for securing A grade ");
+            }
+            else if (a>80) 
+            {
+                document.getElementById("cheg").value = " B grade ";
+                alert(" congratulations for securing B grade you are about to reach 1 step ahead");
+            }
+            else if (a>70) 
+            {
+                document.getElementById("cheg").value = " C grade ";
+                alert(" congratulations for securing C grade keep going on"); 
+            }
+            else if (a>60) 
+            {
+                document.getElementById("cheg").value = " D grade ";
+                alert(" congratulations for securing D grade try to get quite more score"); 
+            }
+            else if (a>=50) 
+            {
+                document.getElementById("cheg").value = " E grade ";
+                alert(" congratulations for securing E grade don't worry try harder ");
+            }
+            else
+            {
+                document.getElementById("cheg").value = " Reappear ";
+                alert(" I know you have good skills but, even though mark is just a number kindly, try to score more ")
+            }
+        }
+
+        function physics()
+        {
+            var a = document.getElementById("phy").value;
+            if (a>100) 
+            {
+                document.getElementById("phyg").value = "invalid data";
+                alert(" invalid");  
+            }
+            else if (a>90) 
+            {
+                document.getElementById("phyg").value = " A grade ";
+                alert(" congratulations for securing A grade ");
+            }
+            else if (a>80) 
+            {
+                document.getElementById("phyg").value = " B grade ";
+                alert(" congratulations for securing B grade you are about to reach 1 step ahead");
+            }
+            else if (a>70) 
+            {
+                document.getElementById("phyg").value = " C grade ";
+                alert(" congratulations for securing C grade keep going on"); 
+            }
+            else if (a>60) 
+            {
+                document.getElementById("phyg").value = " D grade ";
+                alert(" congratulations for securing D grade try to get quite more score"); 
+            }
+            else if (a>=50) 
+            {
+                document.getElementById("phyg").value = " E grade ";
+                alert(" congratulations for securing E grade don't worry try harder ");
+            }
+            else
+            {
+                document.getElementById("phyg").value = " Reappear ";
+                alert(" I know you have good skills but, even though mark is just a number kindly, try to score more ")
+            }
+        }
+
+        function maths()
+        {
+           var a = document.getElementById("math").value;
+           if (a>100) 
+           {
+              document.getElementById("mathg").value = "invalid data";
+              alert(" invalid");  
+           }
+           else if (a>90) 
+           {
+               document.getElementById("mathg").value = " A grade ";
+               alert(" congratulations for securing A grade ");
+           }
+           else if (a>80) 
+           {
+               document.getElementById("mathg").value = " B grade ";
+               alert(" congratulations for securing B grade you are about to reach 1 step ahead");
+           }
+           else if (a>70) 
+           {
+               document.getElementById("mathg").value = " C grade ";
+               alert(" congratulations for securing C grade keep going on"); 
+           }
+           else if (a>60) 
+           {
+               document.getElementById("mathg").value = " D grade ";
+               alert(" congratulations for securing D grade try to get quite more score"); 
+           }
+           else if (a>=50) 
+           {
+               document.getElementById("mathg").value = " E grade ";
+               alert(" congratulations for securing E grade don't worry try harder ");
+           }
+           else
+           {
+               document.getElementById("mathg").value = " Reappear ";
+               alert(" I know you have good skills but, even though mark is just a number kindly, try to score more ")
+           }
+        }
+
+        function computer()
+        {
+           var a = document.getElementById("comp").value;
+           if (a>100) 
+           {
+              document.getElementById("compg").value = "invalid data";
+              alert(" invalid");  
+           }
+           else if (a>90) 
+           {
+              document.getElementById("compg").value = " A grade ";
+              alert(" congratulations for securing A grade ");
+           }
+           else if (a>80) 
+           {
+              document.getElementById("compg").value = " B grade ";
+              alert(" congratulations for securing B grade you are about to reach 1 step ahead");
+           }
+           else if (a>70) 
+           {
+               document.getElementById("compg").value = " C grade ";
+               alert(" congratulations for securing C grade keep going on"); 
+           }
+           else if (a>60) 
+           {
+               document.getElementById("compg").value = " D grade ";
+               alert(" congratulations for securing D grade try to get quite more score"); 
+           }
+           else if (a>=50) 
+           {
+               document.getElementById("compg").value = " E grade ";
+               alert(" congratulations for securing E grade don't worry try harder ");
+           }
+           else
+           {
+               document.getElementById("compg").value = " Reappear ";
+               alert(" I know you have good skills but, even though mark is just a number kindly, try to score more ")
+           }
+        }
+
+        function english()
+        {
+            var a = document.getElementById("eng").value;
+            if (a>100) 
+            {
+                document.getElementById("engg").value = "invalid data";
+                alert(" invalid");  
+            }
+            else if (a>90) 
+            {
+                document.getElementById("engg").value = " A grade ";
+                alert(" congratulations for securing A grade ");
+            }
+            else if (a>80) 
+            {
+                document.getElementById("engg").value = " B grade ";
+                alert(" congratulations for securing B grade you are about to reach 1 step ahead");
+            }
+            else if (a>70) 
+            {
+                document.getElementById("engg").value = " C grade ";
+                alert(" congratulations for securing C grade keep going on"); 
+            }
+            else if (a>60) 
+            {
+                document.getElementById("engg").value = " D grade ";
+                alert(" congratulations for securing D grade try to get quite more score"); 
+            }
+            else if (a>=50) 
+            {
+                document.getElementById("engg").value = " E grade ";
+                alert(" congratulations for securing E grade don't worry try harder ");
+            }
+            else
+            {
+                document.getElementById("engg").value = " Reappear ";
+                alert(" I know you have good skills but, even though mark is just a number kindly, try to score more ")
+            }
+        }
+    </script>
+
+    <script>
+        function total() 
+        {
+            const a = document.querySelector(".chem").value;
+            const b = document.querySelector(".phys").value;
+            const c = document.querySelector(".mat").value;
+            const d = document.querySelector(".com").value;
+            const e = document.querySelector(".engg").value;
+            const f = Number(a)+Number(b)+Number(c)+Number(d)+Number(e);
+            const g = f/50;
+            //document.querySelector(".totalmarks").value = f;
+            //document.querySelector(".cgpa").value = g;
+            if (f<=100 || g<=10) 
+            {
+                document.querySelector(".totalmarks").value = f;
+                document.querySelector(".cgpa").value = g;  
+            }
+            else
+            {
+                document.querySelector(".totalmarks").value = "can't process your data";
+                document.querySelector(".cgpa").value = "can't process your data"; 
+            }
+        }
+    </script>
+</body>
+<footer>
+    <br><br><br>
+    <center><a href="mini_projects.html"><button style="background-color: chartreuse; color: blue;" onclick="thank()">MINI PROJECTS</button></a></center>
+    <script>
+        function thank() 
+        {
+            alert("thank you..");  
+        }
+    </script>
+</footer>
+</html>
